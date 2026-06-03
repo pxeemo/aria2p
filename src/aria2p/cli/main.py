@@ -20,6 +20,7 @@ from aria2p.cli.commands.pause import pause
 from aria2p.cli.commands.purge import purge
 from aria2p.cli.commands.remove import remove
 from aria2p.cli.commands.resume import resume
+from aria2p.cli.commands.retry import retry
 from aria2p.cli.commands.show import show
 from aria2p.cli.commands.top import top
 from aria2p.cli.parser import check_args, get_parser
@@ -41,6 +42,7 @@ commands = {
     "stop": pause,  # alias for pause
     "resume": resume,
     "start": resume,  # alias for resume
+    "retry": retry,
     "remove": remove,
     "rm": remove,  # alias for remove
     "del": remove,  # alias for remove

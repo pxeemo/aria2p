@@ -166,6 +166,7 @@ Commands:
 - [`pause`](#pause)
 - [`remove`](#remove)
 - [`resume`](#resume)
+- [`retry`](#retry)
 - [`show`](#show)
 - [`top`](#top)
 
@@ -474,6 +475,26 @@ positional arguments:
 optional arguments:
   -h, --help  Show this help message and exit.
   -a, --all   Resume all the downloads.
+
+```
+
+
+
+---
+
+### `retry`
+
+```
+usage: aria2p retry [-h] [-a] [gids [gids ...]]
+
+Retry failed downloads. Retried downloads are recreated with new GIDs.
+
+positional arguments:
+  gids        The GIDs of the downloads to retry.
+
+optional arguments:
+  -h, --help  Show this help message and exit.
+  -a, --all   Retry all the failed downloads.
 
 ```
 
