@@ -144,6 +144,7 @@ Commands:
     remove (rm, del, delete)
                         Remove downloads.
     resume (start)      Resume downloads.
+    retry               Retry failed downloads.
     show                Show the download progression.
     top                 Launch the top-like interactive interface.
     listen              Listen to notifications.

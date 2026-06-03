@@ -176,10 +176,7 @@ def get_parser() -> argparse.ArgumentParser:
     pause_parser = subparser("pause", "Pause downloads.", aliases=["stop"])
     remove_parser = subparser("remove", "Remove downloads.", aliases=["rm", "del", "delete"])
     resume_parser = subparser("resume", "Resume downloads.", aliases=["start"])
-    retry_parser = subparser(
-        "retry",
-        "Retry failed downloads. Retried downloads are recreated with new GIDs.",
-    )
+    retry_parser = subparser("retry", "Retry failed downloads.")
     subparser("show", "Show the download progression.")
     subparser("top", "Launch the top-like interactive interface.")
     listen_parser = subparser("listen", "Listen to notifications.")
@@ -268,6 +265,7 @@ def get_parser() -> argparse.ArgumentParser:
     resume_parser.add_argument("-a", "--all", action="store_true", dest="do_all", help="Resume all the downloads.")
 
     # ========= RETRY PARSER ========= #
+    retry_parser.description = "Retry failed downloads. Retried downloads are recreated with new GIDs."
     retry_parser.add_argument("gids", nargs="*", help="The GIDs of the downloads to retry.")
     retry_parser.add_argument("-a", "--all", action="store_true", dest="do_all", help="Retry all the failed downloads.")
 
